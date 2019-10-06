@@ -1,0 +1,1 @@
+package vn.com.kodergang.shop.service;import vn.com.kodergang.common.generics.GenericService;import vn.com.kodergang.shop.entity.AdPermission;import java.util.Map;import java.util.List;public interface AdPermissionService extends GenericService<AdPermission, Integer> {}

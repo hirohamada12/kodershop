@@ -1,0 +1,1 @@
+package vn.com.kodergang.shop.dao.impl;import org.springframework.stereotype.Repository;import vn.com.kodergang.common.generics.impl.GenericDaoImpl;import vn.com.kodergang.shop.dao.AdSessionDao;import vn.com.kodergang.shop.entity.AdSession;@Repository("AdSessionDaoImpl")public class AdSessionDaoImpl extends GenericDaoImpl<AdSession,Integer> implements AdSessionDao {}

@@ -1,0 +1,1 @@
+package vn.com.kodergang.shop.service;import vn.com.kodergang.common.generics.GenericService;import vn.com.kodergang.shop.entity.AdSession;public interface AdSessionService extends GenericService<AdSession,Integer> {}

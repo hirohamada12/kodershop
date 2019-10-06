@@ -1,0 +1,1 @@
+package vn.com.kodergang.shop.dao;import vn.com.kodergang.common.generics.GenericDao;import vn.com.kodergang.shop.entity.AdSession;public interface AdSessionDao extends GenericDao<AdSession,Integer> {}
