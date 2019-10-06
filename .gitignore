@@ -23,3 +23,5 @@ yarn-error.log*
 # Environment
 .env
 
+/KoderGang_Api/.idea
+/KoderGang_Api/logs
