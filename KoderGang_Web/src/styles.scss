@@ -5,3 +5,39 @@ body {
   background: #f6f7f8;
   color: #393c45;
 }
+
+html, body, #app, #root {
+  overflow: hidden;
+}
+
+#preloader {
+  background-color: #fff;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  overflow: hidden !important;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  z-index: 99999999;
+}
+
+#preloader > div {
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+#preloader > div svg {
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
