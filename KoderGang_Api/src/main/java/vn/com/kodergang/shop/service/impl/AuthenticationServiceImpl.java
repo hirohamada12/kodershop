@@ -11,6 +11,7 @@ import vn.com.kodergang.common.utils.TokenJwtUtil;
 import vn.com.kodergang.shop.dao.AdPermissionDao;
 import vn.com.kodergang.shop.dao.AdSessionDao;
 import vn.com.kodergang.shop.dao.AdUserDao;
+import vn.com.kodergang.shop.dao.repo.AdUserRepo;
 import vn.com.kodergang.shop.entity.AdSession;
 import vn.com.kodergang.shop.entity.AdUser;
 import vn.com.kodergang.shop.entity.AuthenticationOutput;
@@ -30,9 +31,13 @@ public class AuthenticationServiceImpl implements AuthenticationService {
     @Autowired
     AdSessionDao adSessionDao;
 
+    @Autowired
+    private AdUserRepo mRepo;
+
     public AuthenticationOutput login(HttpHeaders headers, AdUser identity) {
         identity.setPass(StringUtil.encryptMd5(identity.getPass()));
-        AdUser adUser = adUserDao.getByCondition(identity);
+        System.out.println(identity.getPass());
+        AdUser adUser = mRepo.getByCondition(identity);
         if (adUser != null) {
             AdSession adSession = null;
             try {
