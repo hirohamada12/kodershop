@@ -1,5 +1,3 @@
-PROJECT KODER GANG
-
 # KODER GANG
 
 ## [`KODER GANG`](https://github.com/hirohamada12/kodershop) 
