@@ -172,7 +172,6 @@ class Header extends Component {
             <header className="site-header header-style-menu-center" id="site-header">
                 {this.state.timeout == false ?
                     <div>
-
                         <div className="header-main header-main-bg-color-default">
                             <div className="container-fluid">
                                 <Row>
@@ -235,7 +234,7 @@ class Header extends Component {
                                                                                                         <Fragment>
                                                                                                             <NavItem>
                                                                                                                 <NavLink
-                                                                                                                    href={navLink.path}><i className="fas fa-home"/> {navLink.menu_title}
+                                                                                                                    href={navLink.path}><i className="fa fa-home"/> {navLink.menu_title}
                                                                                                                 </NavLink>
                                                                                                             </NavItem>
 
@@ -368,7 +367,7 @@ class Header extends Component {
                                                                 {/*</li>*/}
                                                                 <li className="ciya-tools-action ciya-tools-search">
                                                                     <Link to="/shop"><i
-                                                                        className="fas fa-search"/></Link>
+                                                                        className="fa fa-search"/></Link>
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -376,7 +375,6 @@ class Header extends Component {
                                                 </div>
                                             </Col>
                                             <Navbar color="faded" light>
-
                                                 <NavbarToggler onClick={this.toggleNavbar} className="mr-2"/>
                                                 <Collapse isOpen={!this.state.collapsed} navbar>
                                                     <Nav className="ml-auto" navbar>

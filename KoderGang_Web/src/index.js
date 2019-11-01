@@ -12,9 +12,10 @@ import App from './containers/App'
 
 
 import "@babel/polyfill";
-import '@fortawesome/fontawesome-free/css/all.min.css';
+//import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap/dist/css/bootstrap.css'
 import './styles.css'
+import './layout/header/styles.css'
 import Loader from "react-loader-spinner";
 
 const loggerMiddleware = createLogger();
