@@ -32,6 +32,14 @@ public interface Constant {
     interface API_PATH {
         String AD_USER = "admin/aduser";
         String AD_PERMISSON = "admin/adpermission";
+        String AD_GROUP = "admin/adgroup";
+        String CATEGORORY = "categorogy";
+        String CATEGORORY_DETAIL = "categorogydetail";
+        String PRODUCT = "product";
+        String SIZE = "size";
+        String STOCK = "stock";
+        String COLOR = "color";
+
     }
 
     interface RESPONSE_STATUS {
