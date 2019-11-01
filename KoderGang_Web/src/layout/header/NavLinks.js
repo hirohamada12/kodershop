@@ -1,12 +1,12 @@
 export default [
     {
-        "menu_title": "Home",
+        "menu_title": "Trang Chủ",
         "type": "menu",
         "path": "/",
         "icon": "FaHome"
     },
     {
-        "menu_title": "Category",
+        "menu_title": "Danh Mục",
         "path": "/category",
         "type": "subMenu",
         "child_routes": [
@@ -25,7 +25,7 @@ export default [
         ],
     },
     {
-        "menu_title": "Blog",
+        "menu_title": "Về Chúng Tôi",
         "path": "/Blogfullwidth",
         "mega": true,
         "icon": "party_mode",
@@ -47,7 +47,7 @@ export default [
     },
 
     {
-        "menu_title": "Pages",
+        "menu_title": "Liên Hệ",
         "type": "subMenu",
         "path": "",
         "icon": "home",
