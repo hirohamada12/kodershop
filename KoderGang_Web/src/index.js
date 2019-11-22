@@ -1,14 +1,12 @@
 import registerServiceWorker from './registerServiceWorker'
-import React, {Suspense} from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom'
 
-import {BrowserRouter} from 'react-router-dom'
-import {applyMiddleware, createStore} from 'redux'
+import {ProductsData} from './actions/product';
+import {BrowserRouter, Route, Switch} from 'react-router-dom'
 import {Provider} from 'react-redux'
-import thunkMiddleware from 'redux-thunk'
-import {createLogger} from 'redux-logger'
-import reducer from './reducers'
 import App from './containers/App'
+import servicesstore from "./services/store";
 
 
 import "@babel/polyfill";
@@ -16,37 +14,22 @@ import "@babel/polyfill";
 import 'bootstrap/dist/css/bootstrap.css'
 import './styles.css'
 import './layout/header/styles.css'
-import Loader from "react-loader-spinner";
 
-const loggerMiddleware = createLogger();
+class Root extends React.Component {
+    render() {
+        servicesstore.dispatch(ProductsData());
+        return (
+            <Provider store={servicesstore}>
+                <BrowserRouter>
+                    <Switch>
+                        <Route path="/" component={App}/>
+                    </Switch>
+                </BrowserRouter>
+            </Provider>
+        );
+    }
+}
 
-const store = createStore(
-    reducer,
-    applyMiddleware(
-        thunkMiddleware,
-        loggerMiddleware
-    )
-);
-
-const loading = () => (
-    <div id="preloader">
-        <Loader
-            type="Puff"
-            color="#04d39f"
-            height={100}
-            width={100}
-        />
-    </div>
-);
-ReactDOM.render(
-    <Suspense fallback={loading()}>
-        <Provider store={store}>
-            <BrowserRouter>
-                <App/>
-            </BrowserRouter>
-        </Provider>
-    </Suspense>,
-    document.getElementById('root')
-);
+ReactDOM.render(<Root/>, document.getElementById('root'));
 
 registerServiceWorker();

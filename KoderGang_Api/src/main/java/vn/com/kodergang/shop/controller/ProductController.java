@@ -5,6 +5,7 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
@@ -31,6 +32,7 @@ public class ProductController {
 
     @PostMapping("/saveProduct")
     @Transactional
+    @PreAuthorize("apiSecured(#headers, '" + Constant.PERMISSION.ADMIN + "', '" + Constant.PRIVILEGE.ADMIN+ "')")
     public ResponseEntity save(@RequestBody Product product) {
         MessagesResponse mess = new MessagesResponse();
         try {
@@ -48,6 +50,7 @@ public class ProductController {
 
     @PostMapping("/activeStatus")
     @Transactional
+    @PreAuthorize("apiSecured(#headers, '" + Constant.PERMISSION.ADMIN + "', '" + Constant.PRIVILEGE.ADMIN+ "')")
     public ResponseEntity updateStatus(@RequestBody Product product) {
         MessagesResponse mess = new MessagesResponse();
         try {
@@ -60,17 +63,17 @@ public class ProductController {
             logger.info(" user: "
                     + SecurityContextHolder.getContext().getAuthentication().getName() + Constant.LOG.END);
         }
-
     }
 
     @PostMapping("/deleteProduct")
     @Transactional
+    @PreAuthorize("apiSecured(#headers, '" + Constant.PERMISSION.ADMIN + "', '" + Constant.PRIVILEGE.ADMIN+ "')")
     public ResponseEntity delete(@RequestBody DeleteProductRequest request) {
         MessagesResponse mess = new MessagesResponse();
         try {
             mProductService.delete(request.getProductId());
             mess.setMessage(Constant.RESPONSE_STATUS.SUCCESS);
-            return new ResponseEntity(Constant.RESPONSE_STATUS.SUCCESS, HttpStatus.OK);
+            return new ResponseEntity(mess, HttpStatus.OK);
         } catch (Exception e) {
             logger.error(e.getMessage(), e);
             return new ResponseEntity(mess.error(e), HttpStatus.OK);

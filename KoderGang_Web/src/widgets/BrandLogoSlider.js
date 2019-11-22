@@ -44,25 +44,25 @@ class BrandLogoSlider extends Component {
                 <div className="ciyashop_clients ciyashop_clients-list-type-slider">
                    <Slider {...settings} className="slider-arrow-hover">
                            <div className="item">
-                               <img className="img-fluid mx-auto" src={require(`../assets/images/categories/new-fashion/brand-1.png`)}  alt="clients-logo" />
+                               <img className="img-fluid mx-auto" src={require(`../assets/images/categories/brand/brand-1.png`)}  alt="clients-logo" />
                             </div>
                             <div className="item">
-                                <img className="img-fluid mx-auto"  src={require(`../assets/images/categories/new-fashion/brand-2.png`)}  alt="clients-logo" />
+                                <img className="img-fluid mx-auto"  src={require(`../assets/images/categories/brand/brand-2.png`)}  alt="clients-logo" />
                             </div>
                             <div className="item">
-                                 <img className="img-fluid mx-auto"  src={require(`../assets/images/categories/new-fashion/brand-3.png`)}  alt="clients-logo" />
+                                 <img className="img-fluid mx-auto"  src={require(`../assets/images/categories/brand/brand-3.png`)}  alt="clients-logo" />
                             </div>
                             <div className="item">
-                                 <img className="img-fluid mx-auto"  src={require(`../assets/images/categories/new-fashion/brand-4.png`)}  alt="clients-logo" />
+                                 <img className="img-fluid mx-auto"  src={require(`../assets/images/categories/brand/brand-4.png`)}  alt="clients-logo" />
                             </div>
                             <div className="item">
-                                  <img className="img-fluid mx-auto"  src={require(`../assets/images/categories/new-fashion/brand-5.png`)}  alt="clients-logo" />
+                                  <img className="img-fluid mx-auto"  src={require(`../assets/images/categories/brand/brand-5.png`)}  alt="clients-logo" />
                             </div>
                             <div className="item">
-                                 <img className="img-fluid mx-auto"  src={require(`../assets/images/categories/new-fashion/brand-6.png`)}  alt="clients-logo" />
+                                 <img className="img-fluid mx-auto"  src={require(`../assets/images/categories/brand/brand-6.png`)}  alt="clients-logo" />
                             </div>
                             <div className="item">
-                                <img className="img-fluid mx-auto"  src={require(`../assets/images/categories/new-fashion/brand-7.png`)}  alt="clients-logo" />
+                                <img className="img-fluid mx-auto"  src={require(`../assets/images/categories/brand/brand-7.png`)}  alt="clients-logo" />
                             </div>
                     </Slider>
                 </div>

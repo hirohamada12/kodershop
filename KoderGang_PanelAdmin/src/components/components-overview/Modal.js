@@ -5,16 +5,25 @@ export var showMessage = function (_message, _title = 'Thông Báo',) {
   this.setState({
     title: _title,
     message: _message,
-    open: true
+    open: true,
+    colorHeader:'#2961ff',
+    showConfirm: false,
   })
 };
+
 export var showConfirm = function (_message, _onConfirm, _title = 'Thông Báo') {
   this.setState({
     title: _title,
     message: _message,
     open: true,
+    colorHeader:'#FFE222',
     showConfirm: true,
     onConfirm: _onConfirm
+  })
+};
+export var hideDialog = function () {
+  this.setState({
+    open: false,
   })
 };
 export var showContent = function (_content, _onConfirm, _title = 'Thêm Mới') {
@@ -33,6 +42,7 @@ export var showError = function (_message, _title = 'Thông Báo',) {
     message: _message,
     colorHeader: '#AD1535',
     open: true,
+    showConfirm: false,
   })
 };
 export default class ModalCustoms extends React.Component {
@@ -43,6 +53,7 @@ export default class ModalCustoms extends React.Component {
     showError = showError.bind(this);
     showConfirm = showConfirm.bind(this);
     showContent = showContent.bind(this);
+    hideDialog = hideDialog.bind(this);
   }
 
   onClose = () => {

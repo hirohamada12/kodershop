@@ -22,10 +22,9 @@ class TopSellingProduct extends Component {
     AddToCart(ProductID, ProductName, ProductImage, Qty, Rate, StockStatus) {
         let Cart = JSON.parse(localStorage.getItem("LocalCartItems"));
         if (Cart == null)
-            Cart = new Array();
+            Cart = [];
         let selectedProduct = Cart.find(product => product.ProductName === ProductName);
         if (selectedProduct == null) {
-
             Cart.push({
                 ProductID: ProductID,
                 ProductName,
@@ -42,11 +41,10 @@ class TopSellingProduct extends Component {
         }
     }
 
-
     AddToWishList(ProductID, ProductName, ProductImage, Qty, Rate, StockStatus) {
         let Cart = JSON.parse(localStorage.getItem("LocalWishListItems"));
         if (Cart == null)
-            Cart = new Array();
+            Cart = [];
 
         let selectedProduct = Cart.find(product => product.ProductName === ProductName);
         if (selectedProduct == null) {
@@ -108,7 +106,6 @@ class TopSellingProduct extends Component {
     }
 
     render() {
-        console.log(MyProducts)
         return (
             <Row className="products products-loop grid ciyashop-products-shortcode">
                 <ToastContainer autoClose={1000}/>
@@ -136,27 +133,27 @@ class TopSellingProduct extends Component {
                                             <div className="product-actions-inner">
                                                 <div className="product-action product-action-add-to-cart">
                                                     {!this.CheckCardItem(product.id) ?
-                                                        <a
-                                                            onClick={() => this.AddToCart(product.id, product.name, product.pictures[0], 1, product.salePrice, "In Stock")}
-                                                            className="button add_to_cart_button" rel="nofollow">Add to
-                                                            cart</a>
+                                                        <Link to={'#'}
+                                                              onClick={() => this.AddToCart(product.id, product.name, product.pictures[0], 1, product.salePrice, "In Stock")}
+                                                              className="button add_to_cart_button" rel="nofollow">Thêm
+                                                            vào giỏ hàng</Link>
                                                         :
                                                         <Link to="/ShopingCart" className="button add_to_cart_button"
-                                                              rel="nofollow">View Cart</Link>
+                                                              rel="nofollow">Giỏ Hàng</Link>
                                                     }
 
                                                 </div>
                                                 <div className="product-action product-action-wishlist">
                                                     {!this.CheckWishList(product.id) ?
-                                                        <a
-                                                            onClick={() => this.AddToWishList(product.id, product.name, product.pictures[0], 1, product.salePrice, "In Stock")}
-                                                            className="add_to_wishlist" data-toggle="tooltip"
-                                                            data-original-title="Wishlist" data-placement="top"> Add to
-                                                            Wishlist</a>
+                                                        <Link to={'#'}
+                                                              onClick={() => this.AddToWishList(product.id, product.name, product.pictures[0], 1, product.salePrice, "In Stock")}
+                                                              className="add_to_wishlist" data-toggle="tooltip"
+                                                              data-original-title="Wishlist" data-placement="top">Thêm
+                                                            vào yêu thích</Link>
                                                         :
                                                         <Link to="/wishlist" className="add_to_wishlist_fill"
                                                               data-toggle="tooltip" data-original-title="Wishlist"
-                                                              data-placement="top">View Wishlist</Link>
+                                                              data-placement="top">Xem Yêu thích</Link>
                                                     }
                                                 </div>
                                             </div>
@@ -167,14 +164,17 @@ class TopSellingProduct extends Component {
                            {product.category}
                         </span>
                                         <h3 className="product-name">
-                                            <Link to={`/shop/${product.category}/${product.id}`}>{product.name} </Link>
+                                            <Link to={`/shop/${product.category}/${product.id}`}>{product.name}</Link>
                                         </h3>
                                         <div className="product-rating-price">
                         <span className="price">
                            <ins>
-                              <span className="price-amount amount">
-                                 <span className="currency-symbol">$</span>{product.salePrice}
+                               <span className="price-amount amount">
+                                 {product.price}<span className="currency-symbol"> đ</span>
                               </span>
+                               {/*<span className="price-amount amount">*/}
+                               {/*   {product.salePrice}<span className="currency-symbol">đ</span>*/}
+                               {/*</span>*/}
                            </ins>
                         </span>
                                             <div className="product-rating">{this.rating(product.rating)}</div>
@@ -188,7 +188,7 @@ class TopSellingProduct extends Component {
                             </div>
                         </Col>
                         :
-                        <div></div>
+                        <div/>
                 )}
 
             </Row>

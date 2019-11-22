@@ -1,20 +1,34 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {Button, Card, CardBody, Col, Container, Row} from "shards-react";
 import {NavLink} from 'react-router-dom';
 import ReactTable from 'react-table';
 import PageTitle from "../../components/common/PageTitle";
 import 'react-table/react-table.css'
 import {
+  hideDialog,
   showConfirm,
   showMessage
 } from "../../components/components-overview/Modal";
+import ProductService from "../../service/ProductService";
 
 const Product = (props) => {
+  const service = new ProductService();
+  const [dataProduct, setDataProduct] = useState([]);
+
+  useEffect(() => {
+    _onLoadData();
+  }, []);
+
+  const _onLoadData = async () => {
+    await service.getAll({productName: ''}, result => {
+      setDataProduct(result.data)
+    });
+  };
   const columns = [
     {
       maxWidth: 50,
       Header: 'STT',
-      accessor: 'id',
+      accessor: 'productId',
       getProps: (state, rowInfo, column) => {
         return {
           style: {
@@ -30,14 +44,14 @@ const Product = (props) => {
       accessor: 'image',
       Cell: props =>
         <span>
-          <img src={require(`../../assets/images/${props.row.image}`)}
+          <img src={require(`../../assets/images/product_1.jpg`)}
                alt="client-avatar" width="40" height="40"/>
                </span>
     },
     {
       minWidth: 150,
       Header: 'Tên sản phẩm',
-      accessor: 'name',
+      accessor: 'productName',
     },
     {
       minWidth: 120,
@@ -46,43 +60,61 @@ const Product = (props) => {
     },
     {
       Header: 'Danh mục',
-      accessor: 'category',
+      accessor: 'categoryName',
     },
     {
       Header: 'Mã sản phẩm',
-      accessor: 'code',
+      accessor: 'productCode',
     },
     {
-      Header: 'Số lượng',
-      accessor: 'quantity',
+      Header: 'Hãng',
+      accessor: 'brand',
     },
     {
       Header: 'Giá',
       accessor: 'price',
     },
     {
+      Header: 'Giảm giá',
+      accessor: 'price',
+    },
+    {
       Header: 'Mô Tả',
-      show: false,
-      accessor: 'description',
+      show: true,
+      accessor: 'shortDescription',
+    },
+    {
+      Header: 'Trạng Thái',
+      show: true,
+      accessor: 'status',
     },
     {
       Header: 'Size',
-      show: false,
-      accessor: 'lstSize',
+      show: true,
+      accessor: 'size',
     },
     {
       Header: 'Images',
       show: false,
       accessor: 'images',
+    }, {
+      Header: 'CategoryId',
+      show: false,
+      accessor: 'categoryId',
     },
     {
       Header: 'Hành Động',
       Cell: props => {
-        console.log('props.id', props.row.id);
+        let data = props.row;
+        data.images = ['625x800.png',
+          '625x800.png',
+          '625x800.png',
+          '625x800.png'];
+        data.image = '625x800.png';
         return (
           <div>
             <NavLink to={{
-              pathname: `/add-product/${props.row.id}`,
+              pathname: `/add-product/${props.row.productId}`,
               data: props.row
             }}>
               <Button size="sm" theme="primary" className="mb-2 mr-1">
@@ -90,7 +122,7 @@ const Product = (props) => {
               </Button>
             </NavLink>
             <Button size="sm" theme="danger" className="mb-2 mr-1"
-                    onClick={() => onDeleteProductItem(props.row.id)}>
+                    onClick={() => onDeleteProductItem(props.row)}>
               <i className="material-icons active-color">delete</i>
             </Button>
           </div>
@@ -98,66 +130,15 @@ const Product = (props) => {
       },
     }
   ];
-  const onDeleteProductItem = (id) => {
-    showConfirm('Bạn có muốn xóa sản phẩm này không', () => {
-      showMessage("Xóa sản phẩm thành công")
+  const onDeleteProductItem = (row) => {
+    showConfirm('Bạn có muốn xóa sản phẩm này không', async () => {
+      hideDialog();
+      service.delete({productId: row.productId}, () => {
+        showMessage("Xóa sản phẩm thành công");
+        _onLoadData();
+      });
     })
   };
-  const dataProduct = [
-    {
-      id: 1,
-      image: 'product_1.jpg',
-      images: ['product_1.jpg', 'product_1.jpg', 'product_1.jpg', 'product_1.jpg'],
-      name: "Product One",
-      category: "MEN",
-      code: 'CHANNEL',
-      productCode: "HN1DA",
-      price: '1000',
-      color: 'Đỏ',
-      quantity: 1,
-      description: 'Chất liệu nỉ',
-      lstSize: ['35', '36']
-    }, {
-      id: 2,
-      name: "Product One",
-      image: 'product_1.jpg',
-      images: ['product_1.jpg', 'product_1.jpg', 'product_1.jpg', 'product_1.jpg'],
-      category: "MEN",
-      code: 'CHANNEL',
-      productCode: "HN1DA",
-      price: '1000',
-      color: 'Đỏ',
-      quantity: 1,
-      description: 'Chất liệu nỉ',
-      lstSize: ['35', '36']
-    }, {
-      id: 3,
-      name: "Product One",
-      image: 'product_1.jpg',
-      images: ['product_1.jpg', 'product_1.jpg', 'product_1.jpg', 'product_1.jpg'],
-      category: "MEN",
-      code: 'CHANNEL',
-      productCode: "HN1DA",
-      price: '1000',
-      color: 'Đỏ',
-      quantity: 1,
-      description: 'Chất liệu nỉ',
-      lstSize: ['35', '36']
-    }, {
-      id: 4,
-      name: "Product One",
-      category: "MEN",
-      image: 'product_1.jpg',
-      images: ['product_1.jpg', 'product_1.jpg', 'product_1.jpg', 'product_1.jpg'],
-      code: 'CHANNEL',
-      productCode: "HN1DA",
-      price: '1000',
-      color: 'Đỏ',
-      quantity: 1,
-      description: 'Chất liệu nỉ',
-      lstSize: ['35', '36']
-    }
-  ];
   return (
     <Container fluid style={{backgroundColor: '#FFF'}}
                className="main-content-container px-4 pb-4">

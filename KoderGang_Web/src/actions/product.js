@@ -1,17 +1,22 @@
-import * as types from '../constants/types'
+import ProductService from "../services/ProductService";
 
-export const getProducts = () =>
-    dispatch =>
-        fetch(`products.json`)
-            .then(response => response.json())
-            .then(response => {
-                dispatch({
-                    type: types.FETCH_PRODUCTS,
-                    payload: response.products
-                })
-            });
+// let MyProducts = data.data.products;
+export const fetchProducts = (product, times) => (
+    setTimeout(() => {
+        const service = new ProductService();
+        service.getAll({}, async result => product(result.data))
+    }, times || 150)
+);
 
-export const compare = product => ({
-    type: types.COMPARE_PRODUCT,
-    product
-});
+export const ProductsData = () => dispatch => {
+    dispatch({
+        type: "GET_PRODUCTS_VALUE"
+    });
+    fetchProducts(products => {
+        dispatch({
+            type: "ACTUAL_PRODUCTS",
+            products
+        });
+        return products;
+    })
+};

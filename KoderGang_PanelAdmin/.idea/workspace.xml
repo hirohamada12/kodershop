@@ -2,219 +2,155 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc4be7ce-0910-496b-b163-d1c1c378b6c5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitmodules" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/$PRODUCT_WORKSPACE_FILE$" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/KoderGang_PanelAdmin.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/btn-learn-more.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/btn-live-preview.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/demo-preview.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/preview.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/625x800.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/admin.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/quill.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/range-date-picker.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/add-new-post/Editor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/add-new-post/SidebarActions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/add-new-post/SidebarCategories.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/blog/Discussions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/blog/NewDraft.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/blog/UsersByDevice.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/blog/UsersOverview.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/CountryReports.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/PageTitle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/RangeDatePicker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/SmallStats.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/TopReferrals.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/components-overview/ButtonGroups.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/components-overview/Checkboxes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/components-overview/Colors.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/components-overview/CompleteFormExample.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/components-overview/CustomFileUpload.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/components-overview/CustomSelect.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/components-overview/DropdownInputGroups.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/components-overview/FormValidation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/components-overview/Forms.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/components-overview/InputGroups.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/components-overview/Modal.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/components-overview/ModalContent.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/components-overview/NormalButtons.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/components-overview/NormalOutlineButtons.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/components-overview/ProgressBars.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/components-overview/RadioButtons.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/components-overview/SeamlessInputGroups.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/components-overview/Sliders.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/components-overview/SmallButtons.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/components-overview/SmallOutlineButtons.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/components-overview/ToggleButtons.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/layout/MainFooter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/layout/MainNavbar/MainNavbar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/layout/MainNavbar/NavbarNav/NavbarNav.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/layout/MainNavbar/NavbarNav/Notifications.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/layout/MainNavbar/NavbarNav/UserActions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/layout/MainNavbar/NavbarSearch.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/layout/MainNavbar/NavbarToggle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/layout/MainSidebar/MainSidebar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/layout/MainSidebar/SidebarMainNavbar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/layout/MainSidebar/SidebarNavItem.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/layout/MainSidebar/SidebarNavItems.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/layout/MainSidebar/SidebarSearch.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/user-profile-lite/UserAccountDetails.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/user-profile-lite/UserDetails.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/sidebar-nav-items.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/flux/constants.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/flux/dispatcher.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/flux/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/flux/store.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/avatars/0.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/avatars/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/avatars/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/avatars/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/content-management/1.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/content-management/10.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/content-management/11.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/content-management/12.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/content-management/13.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/content-management/14.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/content-management/15.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/content-management/16.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/content-management/2.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/content-management/3.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/content-management/4.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/content-management/5.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/content-management/6.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/content-management/7.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/content-management/8.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/content-management/9.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/file-manager/document-preview-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/flags/flag-au.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/flags/flag-jp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/flags/flag-uk.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/flags/flag-us.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/sales-overview/no-product-image.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/sales-overview/product-basics.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/sales-overview/product-order-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/sales-overview/product-order-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/sales-overview/product-order-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/sales-overview/product-shoes.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/sales-overview/product-sportswear.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/sales-overview/product-sweaters.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/shards-dashboards-logo-danger.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/shards-dashboards-logo-info.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/shards-dashboards-logo-java.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/shards-dashboards-logo-royal-blue.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/shards-dashboards-logo-salmon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/shards-dashboards-logo-secondary.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/shards-dashboards-logo-success.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/shards-dashboards-logo-warning.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/shards-dashboards-logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/user-profile/team-thumb-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/user-profile/team-thumb-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/user-profile/team-thumb-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/user-profile/up-user-details-background.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/layouts/Default.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/layouts/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/serviceWorker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shards-dashboard/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shards-dashboard/styleCustom.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/Util.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/chart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/BlogPosts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/ComponentsOverview.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Dashboard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Errors.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Tables.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/UserProfileLite.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/category/AddCategory.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/category/Category.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/order/Order.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/product/AddProduct.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/product/Product.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/users/AddUser.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/users/Users.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/withTracker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/.idea/KoderGang_Web.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/actions/product_1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/actions/product_test.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/assets/images/about.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/assets/images/about.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/assets/images/banner/banner_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/assets/images/banner/banner_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/assets/images/banner/banner_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/assets/images/categories/deal-bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/assets/images/categories/sub.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/assets/images/error-404-image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/assets/images/payments.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/assets/images/singelImage/singel_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/assets/images/singelImage/singel_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/assets/images/singelImage/singel_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/assets/images/slider/img_01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/assets/images/slider/img_02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/assets/product_image/test.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/components/shop/CheckOut.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/components/shop/ShopingCart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/components/shop/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/components/shop/product-detail.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/layout/footer/Footer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/AbountBanner3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/AboutBanner.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/AboutBanner2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/AdminProduct.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/AdminProfileDetail.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/BlogSingPageSlider.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/BrandLogoSlider.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/BrandLogoSlider2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/Businessschedule.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/CommingSoonCounter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/ContactDetail.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/ContactForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/CountDownTimer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/DealOfTheWeek.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/EndOfSeason.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/HomSlider.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/HomeBanner.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/Instafeed.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/InterestingFacts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/OurLatestPost.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/OurTeam.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/PageTitle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/ProductList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/ProductSlider.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/Subscribe.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/Testimonial.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/TopSellingProduct.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/shopfilter/ShopBanner.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/shopfilter/SideFilter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/shopfilter/SocialInfo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/shopfilter/TopFilter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KoderGang_Web/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../KoderGang_Web/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KoderGang_Web/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/../KoderGang_Web/public/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/bg_login.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/bg_login.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/Constants.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/RestAPIHelper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/Util.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/service/BaseService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/service/CategoryService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/service/ProductService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/AccessDenied.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Page404.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Page500.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/actions/filter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/actions/product.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/admin/AdminProductList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/admin/Adminheader.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/admin/Adminsitebar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/admin/Category/Category.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/admin/Category/CategoryDetail.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/admin/Collaboration.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/admin/Invoices.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/admin/Login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/admin/Product/Productadd.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/admin/Product/Productedit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/admin/ProductEditDetail.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/admin/Profile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/admin/Profileedit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/admin/Reports.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/admin/Settings.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/admin/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/assets/canvasjs.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/assets/canvasjs.react.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/assets/images/bg_login.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/assets/images/categories/brand/brand-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/assets/images/categories/brand/brand-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/assets/images/categories/brand/brand-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/assets/images/categories/brand/brand-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/assets/images/categories/brand/brand-5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/assets/images/categories/brand/brand-6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/assets/images/categories/brand/brand-7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/assets/images/empty-cart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/assets/images/empty-search.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/assets/images/img-01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/assets/images/img-02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/assets/images/img-03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/assets/images/img-04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/assets/images/shop/sale-banner2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/assets/images/shop/shop-banner.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/assets/images/team/about-us-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/assets/images/team/about-us.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/assets/images/team/img-01.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/assets/images/team/img-01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/assets/images/team/img-02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/assets/images/team/img-03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/assets/images/team/img-04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/assets/images/team/img-05.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/assets/images/team/img-06.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/assets/images/team/img-07.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/assets/images/team/img-08.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/assets/product_image/product-single.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/common/Constants.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/common/CryptoUtil.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/common/DefaultCommon.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/common/MyCollaboration.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/common/RestAPIHelper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/common/Util.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/common/invoice.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/components/About/Aboutus.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/components/Contact/Contactus.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/components/modal/Modal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/components/modal/ModalContent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/components/shop/PostDetail.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/reducers/filters.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/reducers/products.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/services/BaseService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/services/CategoryService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/services/Pagination.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/services/ProductService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/services/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KoderGang_Web/src/services/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KoderGang_Api/src/main/java/vn/com/kodergang/shop/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../KoderGang_Api/src/main/java/vn/com/kodergang/shop/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KoderGang_Api/src/main/java/vn/com/kodergang/shop/controller/SizeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../KoderGang_Api/src/main/java/vn/com/kodergang/shop/controller/SizeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KoderGang_Api/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../KoderGang_Api/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KoderGang_Api/target/classes/META-INF/KoderGangApi.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KoderGang_Api/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../KoderGang_Api/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KoderGang_Api/target/classes/vn/com/kodergang/shop/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../KoderGang_Api/target/classes/vn/com/kodergang/shop/controller/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/components-overview/Modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/components-overview/Modal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/components-overview/ModalContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/components-overview/ModalContent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/MainNavbar/NavbarNav/UserActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/MainNavbar/NavbarNav/UserActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shards-dashboard/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/shards-dashboard/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/category/AddCategory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/category/AddCategory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/category/Category.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/category/Category.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/product/AddProduct.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/product/AddProduct.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/product/Product.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/product/Product.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KoderGang_Web/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../KoderGang_Web/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KoderGang_Web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../KoderGang_Web/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KoderGang_Web/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/../KoderGang_Web/public/favicon.ico" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../KoderGang_Web/src/actions/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/../KoderGang_Web/src/actions/product.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KoderGang_Web/src/actions/product_test.json" beforeDir="false" afterPath="$PROJECT_DIR$/../KoderGang_Web/src/actions/product_test.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KoderGang_Web/src/assets/images/about.png" beforeDir="false" afterPath="$PROJECT_DIR$/../KoderGang_Web/src/assets/images/about.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KoderGang_Web/src/assets/images/error-404-image.png" beforeDir="false" afterPath="$PROJECT_DIR$/../KoderGang_Web/src/assets/images/error-404-image.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KoderGang_Web/src/assets/images/singelImage/singel_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../KoderGang_Web/src/assets/images/singelImage/singel_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KoderGang_Web/src/assets/images/singelImage/singel_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../KoderGang_Web/src/assets/images/singelImage/singel_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KoderGang_Web/src/assets/images/singelImage/singel_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../KoderGang_Web/src/assets/images/singelImage/singel_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KoderGang_Web/src/assets/images/slider/img_01.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../KoderGang_Web/src/assets/images/slider/img_01.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KoderGang_Web/src/common/RestApiHelper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/CryptoUtil.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KoderGang_Web/src/components/Compare/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KoderGang_Web/src/components/Compare/styles.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KoderGang_Web/src/components/Product/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KoderGang_Web/src/components/Product/styles.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KoderGang_Web/src/components/ProductList/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KoderGang_Web/src/components/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KoderGang_Web/src/components/shop/CheckOut.js" beforeDir="false" afterPath="$PROJECT_DIR$/../KoderGang_Web/src/components/shop/CheckOut.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KoderGang_Web/src/components/shop/ShopingCart.js" beforeDir="false" afterPath="$PROJECT_DIR$/../KoderGang_Web/src/components/shop/ShopingCart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KoderGang_Web/src/components/shop/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../KoderGang_Web/src/components/shop/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KoderGang_Web/src/components/shop/product-detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/../KoderGang_Web/src/components/shop/product-detail.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../KoderGang_Web/src/containers/App/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../KoderGang_Web/src/containers/App/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../KoderGang_Web/src/containers/Home/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../KoderGang_Web/src/containers/Home/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../KoderGang_Web/src/containers/NotFound/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../KoderGang_Web/src/containers/NotFound/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../KoderGang_Web/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../KoderGang_Web/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../KoderGang_Web/src/layout/header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/../KoderGang_Web/src/layout/header/Header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../KoderGang_Web/src/layout/header/NavLinks.js" beforeDir="false" afterPath="$PROJECT_DIR$/../KoderGang_Web/src/layout/header/NavLinks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KoderGang_Web/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../KoderGang_Web/src/reducers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KoderGang_Web/src/reducers/productReducer.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../KoderGang_Web/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../KoderGang_Web/src/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KoderGang_Web/src/translation/en/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/../KoderGang_Web/src/translation/en/en.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KoderGang_Web/src/translation/vi/vi.json" beforeDir="false" afterPath="$PROJECT_DIR$/../KoderGang_Web/src/translation/vi/vi.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/AboutBanner2.js" beforeDir="false" afterPath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/AboutBanner2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/AdminProduct.js" beforeDir="false" afterPath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/AdminProduct.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/AdminProfileDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/AdminProfileDetail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/BrandLogoSlider.js" beforeDir="false" afterPath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/BrandLogoSlider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/Businessschedule.js" beforeDir="false" afterPath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/Businessschedule.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/ContactDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/ContactDetail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/ContactForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/ContactForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/InterestingFacts.js" beforeDir="false" afterPath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/InterestingFacts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/OurTeam.js" beforeDir="false" afterPath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/OurTeam.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/PageTitle.js" beforeDir="false" afterPath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/PageTitle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/ProductList.js" beforeDir="false" afterPath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/ProductList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/ProductSlider.js" beforeDir="false" afterPath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/ProductSlider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/TopSellingProduct.js" beforeDir="false" afterPath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/TopSellingProduct.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/shopfilter/SideFilter.js" beforeDir="false" afterPath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/shopfilter/SideFilter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/shopfilter/SocialInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/shopfilter/SocialInfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/shopfilter/TopFilter.js" beforeDir="false" afterPath="$PROJECT_DIR$/../KoderGang_Web/src/widgets/shopfilter/TopFilter.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -238,20 +174,21 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="D:/AndroidSDK" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/images" />
+    <property name="last_opened_file_path" value="D:/MDF_BHTT_2019/source/mbf-bhtt-framework" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\IntelliJ IDEA 2019.2.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\KoderShop\Branch_AnhVTN11\KoderGang_PanelAdmin\src\assets\images" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\KoderShop\Branch_AnhVTN11\KoderGang_PanelAdmin\src\views\product" />
       <recent name="D:\KoderShop\Branch_AnhVTN11\KoderGang_PanelAdmin\src\views\category" />
       <recent name="D:\KoderShop\Branch_AnhVTN11\KoderGang_PanelAdmin\src\shards-dashboard" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\KoderShop\Branch_AnhVTN11\KoderGang_PanelAdmin\assets" />
+      <recent name="D:\KoderShop\Branch_AnhVTN11\KoderGang_PanelAdmin\src\assets\images" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -287,6 +224,13 @@
       <workItem from="1572439585818" duration="6158000" />
       <workItem from="1572488373889" duration="238000" />
       <workItem from="1572526689219" duration="1207000" />
+      <workItem from="1572679028088" duration="1410000" />
+      <workItem from="1572875583363" duration="13438000" />
+      <workItem from="1573047615121" duration="6480000" />
+      <workItem from="1573135978370" duration="6542000" />
+      <workItem from="1573275636917" duration="11004000" />
+      <workItem from="1573567967330" duration="2551000" />
+      <workItem from="1573610268443" duration="633000" />
     </task>
     <servers />
   </component>

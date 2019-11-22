@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {Button, Card, CardBody, Col, Container, Row} from "shards-react";
 import ReactTable from 'react-table';
 import PageTitle from "../../components/common/PageTitle";
@@ -7,18 +7,27 @@ import {
   showConfirm,
   showMessage
 } from "../../components/components-overview/Modal";
-import {
-  hideModalContent,
-  showContent
-} from "../../components/components-overview/ModalContent";
+import {showContent} from "../../components/components-overview/ModalContent";
 import AddCategory from "./AddCategory";
+import CategoryService from "../../service/CategoryService";
+import Constants from "../../common/Constants";
 
-const Product = (props) => {
+const Category = (props) => {
+  const service = new CategoryService();
+  const [data, setData] = useState();
+  useEffect(() => {
+    onLoad();
+  }, []);
+  const onLoad = () => {
+    service.getAll({}, result => {
+      setData(result.data);
+    })
+  };
   const columns = [
     {
       maxWidth: 50,
       Header: 'STT',
-      accessor: 'id',
+      accessor: 'categoryId',
       getProps: (state, rowInfo, column) => {
         return {
           style: {
@@ -45,6 +54,7 @@ const Product = (props) => {
     },
     {
       Header: 'Thời gian tạo',
+      show: false,
       accessor: 'createTime',
     },
     {
@@ -54,7 +64,7 @@ const Product = (props) => {
     {
       Header: 'Hành Động',
       Cell: props => {
-        console.log('props.id', props.row.id);
+        console.log('props.id', props.row.categoryId);
         return (
           <div>
             <Button onClick={() => {
@@ -77,41 +87,22 @@ const Product = (props) => {
     })
   };
   const onInsert = () => {
-    showContent(<AddCategory/>, async () => {
-      await hideModalContent();
-      showMessage("Lưu sản phẩm thành công")
-    }, 'Thêm mới danh mục')
+    showContent(<AddCategory onLoad={onLoad} action={Constants.ACTION.INSERT}
+                             data={{
+                               categoryCode: '',
+                               categoryName: '',
+                               description: '',
+                               createDate: '',
+                               status: ''
+                             }}/>, 'Thêm mới danh mục')
   };
   const onEdit = (data) => {
-    showContent(<AddCategory data={data}/>, async () => {
-      await hideModalContent();
-      showMessage("Lưu sản phẩm thành công")
-    }, 'Thêm mới danh mục')
+    showContent(<AddCategory
+      onLoad={onLoad}
+      action={Constants.ACTION.UPDATE}
+      on
+      data={data}/>, 'Thêm mới danh mục')
   };
-  const dataProduct = [
-    {
-      id: 1,
-      categoryName: "Áo",
-      categoryCode: "AO",
-      description: 'Các sản phẩm quần áo',
-      createTime: "30/10/2019",
-      status: 'Active',
-    }, {
-      id: 1,
-      categoryName: "Quần",
-      categoryCode: "QUAN",
-      description: 'Các sản phẩm quần',
-      createTime: "30/10/2019",
-      status: 'Active',
-    }, {
-      id: 1,
-      categoryName: "Phụ kiện",
-      categoryCode: "PK",
-      description: 'Các sản phẩm phụ kiện',
-      createTime: "30/10/2019",
-      status: 'Active',
-    },
-  ];
   return (
     <Container fluid style={{backgroundColor: '#FFF'}}
                className="main-content-container px-4 pb-4">
@@ -132,7 +123,7 @@ const Product = (props) => {
               </div>
               <CardBody className="p-0 pb-3">
                 <ReactTable
-                  data={dataProduct}
+                  data={data}
                   columns={columns}
                   defaultPageSize={10}
                 />
@@ -145,4 +136,4 @@ const Product = (props) => {
   );
 };
 
-export default Product;
+export default Category;

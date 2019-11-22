@@ -1,4 +1,7 @@
 {
   "language": "vi",
-  "compareProduct": "Compare Products"
+  "compareProduct": "Compare Products",
+  "returnHome": "Return to home",
+  "404": "404 - THE PAGE CAN'T BE FOUND",
+  "emptyCart": "Your cart is empty"
 }

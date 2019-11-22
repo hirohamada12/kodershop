@@ -1,4 +1,7 @@
 {
   "language": "eng",
-  "compareProduct": "So sánh Sản phẩm"
+  "compareProduct": "So sánh Sản phẩm",
+  "returnHome": "Quay về trang chủ",
+  "404": "Không tìm thấy trang",
+  "emptyCart": "Không có sản phẩm nào trong giỏ hàng"
 }

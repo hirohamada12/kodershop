@@ -4,7 +4,7 @@
       {
         "id": 1,
         "name": "Buckle belt – Saint Laurent",
-        "price": 200,
+        "price": 200000,
         "salePrice": 180,
         "discount": 20,
         "pictures": [
@@ -37,7 +37,7 @@
       {
         "id": 2,
         "name": "La-ta-da Boho Chic Head Wrap",
-        "price": 330,
+        "price": 330000,
         "salePrice": 165,
         "discount": 50,
         "pictures": [
@@ -69,7 +69,7 @@
       {
         "id": 3,
         "name": "Women's Cozy Leisure Top",
-        "price": 500,
+        "price": 500000,
         "salePrice": 500,
         "discount": 0,
         "pictures": [
@@ -104,7 +104,7 @@
       {
         "id": 4,
         "name": "Women's Crochet Shoulder Chevron Sweatshirt",
-        "price": 580,
+        "price": 580000,
         "salePrice": 200,
         "discount": 380,
         "pictures": [
@@ -139,8 +139,8 @@
       {
         "id": 5,
         "name": "Women's Velour Hoodie",
-        "price": 42,
-        "salePrice": 120,
+        "price": 420000,
+        "salePrice": 12000,
         "discount": 5,
         "pictures": [
           "test.jpg",
@@ -174,7 +174,7 @@
       {
         "id": 6,
         "name": "Women's Accessories Vegan Leather Mini Backpack",
-        "price": 130,
+        "price": 1300000,
         "salePrice": 500,
         "discount": 100,
         "pictures": [
@@ -204,7 +204,7 @@
       {
         "id": 7,
         "name": "WD·NY Black – Men's Pinstripe Seer Sucker Vest",
-        "price": 950,
+        "price": 95000,
         "salePrice": 725,
         "discount": 2000,
         "pictures": [
@@ -238,7 +238,7 @@
       {
         "id": 8,
         "name": "WD·NY Black – Men's Palm Burgundy Jacket",
-        "price": 780,
+        "price": 780000,
         "salePrice": 380,
         "discount": 200,
         "pictures": [
@@ -273,7 +273,7 @@
       {
         "id": 9,
         "name": "Men's Standard Fit Bomber Sweater",
-        "price": 870,
+        "price": 870000,
         "salePrice": 870,
         "discount": 0,
         "pictures": [
@@ -307,7 +307,7 @@
       {
         "id": 10,
         "name": "Men's Standard Fit Deconstructed Knit Blazer",
-        "price": 900,
+        "price": 900000,
         "salePrice": 600,
         "discount": 300,
         "pictures": [
@@ -343,7 +343,7 @@
       {
         "id": 11,
         "name": "Toddler Boys' Jackets – Red",
-        "price": 50,
+        "price": 500000,
         "salePrice": 250,
         "discount": 25,
         "pictures": [
@@ -390,7 +390,7 @@
       {
         "id": 12,
         "name": "Extra Fine Wool Jumpers",
-        "price": 25,
+        "price": 250000,
         "salePrice": 180,
         "discount": 15,
         "pictures": [
@@ -432,7 +432,7 @@
       {
         "id": 13,
         "name": "Girls' Long Sleeve Bow Top",
-        "price": 80,
+        "price": 800000,
         "salePrice": 770,
         "discount": 10,
         "pictures": [
@@ -474,7 +474,7 @@
       {
         "id": 14,
         "name": "Men's Long Sleeve Micro Thermal Shirt",
-        "price": 950,
+        "price": 950000,
         "salePrice": 425,
         "discount": 50,
         "pictures": [
@@ -521,7 +521,7 @@
       {
         "id": 15,
         "name": "Men's Wool Top Coat",
-        "price": 350,
+        "price": 350000,
         "salePrice": 780,
         "discount": 200,
         "pictures": [
@@ -564,7 +564,7 @@
       {
         "id": 16,
         "name": "Women's Leopard Faux Fur Coat",
-        "price": 400,
+        "price": 400000,
         "salePrice": 300,
         "discount": 20,
         "pictures": [
@@ -598,7 +598,7 @@
       {
         "id": 17,
         "name": "Men's Standard Fit Sweater Fleece Jacket",
-        "price": 800,
+        "price": 800000,
         "salePrice": 400,
         "discount": 400,
         "pictures": [
@@ -640,7 +640,7 @@
       {
         "id": 18,
         "name": "Girls' Lace Mock Neck Dress – art class",
-        "price": 2000,
+        "price": 200000,
         "salePrice": 1500,
         "discount": 500,
         "pictures": [
@@ -689,7 +689,7 @@
       {
         "id": 19,
         "name": "Women's Fabric Mix Midi Dress",
-        "price": 500,
+        "price": 500000,
         "salePrice": 1950,
         "discount": 250,
         "pictures": [
@@ -729,7 +729,7 @@
       {
         "id": 20,
         "name": "Women's Ugly Holiday Sweater",
-        "price": 220,
+        "price": 220000,
         "salePrice": 210,
         "discount": 10,
         "pictures": [
@@ -768,7 +768,7 @@
       {
         "id": 21,
         "name": "Girls' Long Sleeve Graphic T-Shirt – White",
-        "price": 150,
+        "price": 1500000,
         "salePrice": 120,
         "discount": 30,
         "pictures": [
@@ -811,7 +811,7 @@
       {
         "id": 22,
         "name": "Girls' Textured Sweater",
-        "price": 330,
+        "price": 330000,
         "salePrice": 200,
         "discount": 150,
         "pictures": [
@@ -854,7 +854,7 @@
       {
         "id": 23,
         "name": "Women's Velvet Strappy Romper",
-        "price": 770,
+        "price": 7700000,
         "salePrice": 500,
         "discount": 250,
         "pictures": [
@@ -896,7 +896,7 @@
       {
         "id": 24,
         "name": "Women's Satin Jumpsuit",
-        "price": 289,
+        "price": 2890000,
         "salePrice": 217,
         "discount": 53,
         "pictures": [
@@ -925,7 +925,7 @@
       {
         "id": 25,
         "name": "Women's Cheers Pullover",
-        "price": 800,
+        "price": 800000,
         "salePrice": 500,
         "discount": 30,
         "pictures": [
@@ -969,7 +969,7 @@
       {
         "id": 26,
         "name": "Women's Long Sleeve Sweatshirt With Bow",
-        "price": 1569,
+        "price": 1569000,
         "salePrice": 1200,
         "discount": 369,
         "pictures": [
@@ -1010,7 +1010,7 @@
       {
         "id": 27,
         "name": "Girls' Shine Stripe Long Sleeve Ruffle Top",
-        "price": 1500,
+        "price": 1500000,
         "salePrice": 1000,
         "discount": 500,
         "pictures": [
@@ -1053,7 +1053,7 @@
       {
         "id": 28,
         "name": "Girls' Long Sleeve Graphic T-Shirt – White",
-        "price": 322,
+        "price": 322000,
         "salePrice": 161,
         "discount": 167,
         "pictures": [
@@ -1095,7 +1095,7 @@
       {
         "id": 29,
         "name": "Men's Standard Fit Short Sleeve Crew T-Shirt",
-        "price": 390,
+        "price": 3900000,
         "salePrice": 210,
         "discount": 180,
         "pictures": [
@@ -1138,7 +1138,7 @@
       {
         "id": 30,
         "name": "Men's Standard Fit Short Sleeve V-Neck T-Shirt",
-        "price": 1600,
+        "price": 1600000,
         "salePrice": 1200,
         "discount": 400,
         "pictures": [
@@ -1180,7 +1180,7 @@
       {
         "id": 31,
         "name": "Men's Standard Fit Short Sleeve Crew T-Shirt",
-        "price": 1300,
+        "price": 1300000,
         "salePrice": 600,
         "discount": 700,
         "pictures": [
@@ -1220,7 +1220,7 @@
       {
         "id": 32,
         "name": "Women's Jacquard Ruffle Sleeve Fit & Flare Dress",
-        "price": 200,
+        "price": 200000,
         "salePrice": 390,
         "discount": 10,
         "pictures": [
@@ -1261,7 +1261,7 @@
       {
         "id": 33,
         "name": "Women's Robes – Gray",
-        "price": 200,
+        "price": 200000,
         "salePrice": 130,
         "discount": 70,
         "pictures": [
@@ -1303,7 +1303,7 @@
       {
         "id": 34,
         "name": "Women's Cold-Shoulder Bow-Sleeve Sweater Dress",
-        "price": 320,
+        "price": 320000,
         "salePrice": 160,
         "discount": 160,
         "pictures": [
@@ -1346,7 +1346,7 @@
       {
         "id": 35,
         "name": "Girls' Long Sleeve Ruffle Top – Cream",
-        "price": 400,
+        "price": 400000,
         "salePrice": 370,
         "discount": 30,
         "pictures": [
@@ -1384,7 +1384,7 @@
       {
         "id": 36,
         "name": "Girls' Cold Shoulder Short Sleeve T-Shirt with Tulle – Orange",
-        "price": 230,
+        "price": 230000,
         "salePrice": 115,
         "discount": 110,
         "pictures": [
@@ -1426,7 +1426,7 @@
       {
         "id": 37,
         "name": "Women's Flannel Sleep shirt",
-        "price": 480,
+        "price": 480000,
         "salePrice": 240,
         "discount": 30,
         "pictures": [
@@ -1468,7 +1468,7 @@
       {
         "id": 38,
         "name": "Women's 2pc Pajama Set – Almond Cream",
-        "price": 210,
+        "price": 210000,
         "salePrice": 120,
         "discount": 100,
         "pictures": [
@@ -1508,7 +1508,7 @@
       {
         "id": 39,
         "name": "Men's Joseph Captoe Dress Shoe",
-        "price": 1200,
+        "price": 120000,
         "salePrice": 900,
         "discount": 230,
         "pictures": [
@@ -1537,7 +1537,7 @@
       {
         "id": 40,
         "name": "Women's Cozy Leisure Top",
-        "price": 635,
+        "price": 635000,
         "salePrice": 456,
         "discount": 362,
         "pictures": [
@@ -1580,7 +1580,7 @@
       {
         "id": 41,
         "name": "Women's Crochet Bell Sleeve Dress",
-        "price": 200,
+        "price": 200000,
         "salePrice": 120,
         "discount": 80,
         "pictures": [
@@ -1622,7 +1622,7 @@
       {
         "id": 42,
         "name": "Women's Ruffle Wrap Dress",
-        "price": 200,
+        "price": 200000,
         "salePrice": 160,
         "discount": 40,
         "pictures": [
@@ -1664,7 +1664,7 @@
         ]
       }
     ],
-    "symbol": "$",
+    "symbol": "đ",
     "product_details": []
   },
   "filters": {
@@ -1674,7 +1674,7 @@
     "ratings": "",
     "value": {
       "min": 150,
-      "max": 1050
+      "max": 1000000
     },
     "search": "",
     "sortBy": ""

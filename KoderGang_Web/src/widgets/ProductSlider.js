@@ -6,15 +6,15 @@ import Slider from "react-slick";
 import {Col} from 'reactstrap';
 import {Link} from 'react-router-dom';
 import {toast, ToastContainer} from 'react-toastify';
+import data from '../actions/product_1';
 
-let MyProducts = [];
+let MyProducts = data.data.products;
 
 function ProductSlider(props) {
     const settings = props.settings;
 
-
     function AddToCart(ProductID, ProductName, ProductImage, Qty, Rate, StockStatus) {
-        var Cart = JSON.parse(localStorage.getItem("LocalCartItems"));
+        let Cart = JSON.parse(localStorage.getItem("LocalCartItems"));
         if (Cart == null)
             Cart = new Array();
         let selectedProduct = Cart.find(product => product.ProductName === ProductName);
@@ -40,7 +40,7 @@ function ProductSlider(props) {
 
     function CheckCardItem(ID) {
         let checkcart = false;
-        var Cart = JSON.parse(localStorage.getItem("LocalCartItems"));
+        let Cart = JSON.parse(localStorage.getItem("LocalCartItems"));
         if (Cart && Cart.length > 0) {
             for (const cartItem of Cart) {
                 if (cartItem.ProductID === ID) {
@@ -53,7 +53,7 @@ function ProductSlider(props) {
 
     function CheckWishList(ID) {
         let wishlist = false;
-        var Wish = JSON.parse(localStorage.getItem("LocalWishListItems"));
+        let Wish = JSON.parse(localStorage.getItem("LocalWishListItems"));
 
         if (Wish && Wish.length > 0) {
             for (const wishItem of Wish) {
@@ -66,7 +66,7 @@ function ProductSlider(props) {
     }
 
     function AddToWishList(ProductID, ProductName, ProductImage, Qty, Rate, StockStatus) {
-        var Cart = JSON.parse(localStorage.getItem("LocalWishListItems"));
+        let Cart = JSON.parse(localStorage.getItem("LocalWishListItems"));
         if (Cart == null)
             Cart = new Array();
 
@@ -113,7 +113,6 @@ function ProductSlider(props) {
                 <div className="products" data-nav-arrow="true" data-items={4} data-md-items={3} data-sm-items={3}
                      data-xs-items={2} data-xx-items={1} data-space={20}>
                     <Slider {...settings} className="slider-spacing-10 slider-arrow-hover">
-
                         {MyProducts.map((product, index) =>
                             <div className="item">
                                 <div
@@ -123,7 +122,7 @@ function ProductSlider(props) {
                                             <div className="product-thumbnail-inner">
                                                 <a href={`/shop/${product.category}/${product.id}`}> {product.pictures[0] ?
                                                     <div className="product-thumbnail-main">
-                                                        <img src={require(`../assets/images/${product.pictures[0]}`)}
+                                                        <img src={require(`../assets/product_image/${product.pictures[0]}`)}
                                                              className="img-fluid"/>
                                                     </div>
                                                     :
@@ -132,7 +131,7 @@ function ProductSlider(props) {
                                                     {product.pictures[1] ?
                                                         <div className="product-thumbnail-swap">
                                                             <img
-                                                                src={require(`../assets/images/${product.pictures[1]}`)}
+                                                                src={require(`../assets/product_image/${product.pictures[1]}`)}
                                                                 className="img-fluid"/>
                                                         </div>
                                                         :
@@ -145,9 +144,9 @@ function ProductSlider(props) {
                                                 <div className="product-actions-inner">
                                                     <div className="product-action product-action-add-to-cart">
                                                         {!CheckCardItem(product.id) ?
-                                                            <Link
-                                                                onClick={() => AddToCart(product.id, product.name, product.pictures[0], 1, product.salePrice, "In Stock")}
-                                                                className="button add_to_cart_button" rel="nofollow">Add
+                                                            <Link to={'#'}
+                                                                  onClick={() => AddToCart(product.id, product.name, product.pictures[0], 1, product.price, "In Stock")}
+                                                                  className="button add_to_cart_button" rel="nofollow">Add
                                                                 to
                                                                 cart</Link>
                                                             :
@@ -158,10 +157,11 @@ function ProductSlider(props) {
                                                     </div>
                                                     <div className="product-action product-action-wishlist">
                                                         {!CheckWishList(product.id) ?
-                                                            <Link
-                                                                onClick={() => AddToWishList(product.id, product.name, product.pictures[0], 1, product.salePrice, "In Stock")}
-                                                                className="add_to_wishlist" data-toggle="tooltip"
-                                                                data-original-title="Wishlist" data-placement="top"> Add
+                                                            <Link to={"#"}
+                                                                  onClick={() => AddToWishList(product.id, product.name, product.pictures[0], 1, product.price, "In Stock")}
+                                                                  className="add_to_wishlist" data-toggle="tooltip"
+                                                                  data-original-title="Wishlist"
+                                                                  data-placement="top"> Add
                                                                 to
                                                                 Wishlist</Link>
                                                             :
@@ -181,7 +181,7 @@ function ProductSlider(props) {
                                                 <a href={`/shop/${product.category}/${product.id}`}>{product.name}</a>
                                             </h3>
                                             <div className="product-rating-price">
-                                                
+
                                                 <span className="price">
                                                     <ins>
                                                         <span className="price-amount amount">

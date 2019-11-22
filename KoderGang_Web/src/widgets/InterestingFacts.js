@@ -13,9 +13,9 @@ function InterestingFacts() {
                 <Row>
                     <Col sm={12}>
                     <div className="section-title text-center">
-                        <h2 className="font-bold title">Interesting Facts</h2>
-                        <p className="text-center">Discover the best collection for autumn of Stylist Art. With so
-                        charming, modern and passionate, you certainly love this collection.</p>
+                        <h2 className="font-bold title">Sự thật thú vị</h2>
+                        <p className="text-center">Khám phá bộ sưu tập tốt nhất cho mùa thu của stylist Art. Với rất
+                            quyến rũ, hiện đại và đam mê, bạn chắc chắn yêu thích bộ sưu tập này.</p>
                     </div>
                     </Col>
                 </Row>
@@ -39,10 +39,9 @@ function InterestingFacts() {
                                     01 </span>
                                 </div>
                                 <h4 className="ciyashop_info_box-title" style={{color: '#323232'}}>
-                                Free exchanges </h4>
+                                    Đổi Trả Miễn Phí </h4>
                                 <div className="ciyashop_info_box-description">
-                                <p>If something isn't your cup of tea then you can simply swap it
-                                    for another experience.</p>
+                                <p>Nếu bạn không thích nó bạn có thể đổi.</p>
                                 </div>
                             </div>
                             </div>
@@ -67,10 +66,9 @@ function InterestingFacts() {
                                     02 </span>
                                 </div>
                                 <h4 className="ciyashop_info_box-title" style={{color: '#323232'}}>
-                                60 Day refund policy </h4>
+                                    Chính sách hoàn tiền trong 60 ngày </h4>
                                 <div className="ciyashop_info_box-description">
-                                <p>Plenty of time to change your mind odio dignissimos ducimus qui
-                                    blanditiis praesentium.</p>
+                                <p>Nếu bạn gặp lỗi với sản phẩm chúng tôi sẵn sàng hoàn tiền</p>
                                 </div>
                             </div>
                             </div>
@@ -95,10 +93,9 @@ function InterestingFacts() {
                                     03 </span>
                                 </div>
                                 <h4 className="ciyashop_info_box-title" style={{color: '#323232'}}>
-                                E-vouchers to inbox </h4>
+                                E-vouchers vào email </h4>
                                 <div className="ciyashop_info_box-description">
-                                <p>Sent straight to your inbox within 2 hours many desktop
-                                    publishing packages.</p>
+                                <p>Chúng tôi luôn gửi các vouchers vào email của bạn</p>
                                 </div>
                             </div>
                             </div>
@@ -107,7 +104,7 @@ function InterestingFacts() {
                     </div>
                     </Col>
                     <Col sm={4} className="d-none d-lg-block">
-                    <img src={require(`../assets/images/about-us-1.png`)} className="img-fluid" />
+                    <img src={require(`../assets/images/team/about-us-1.png`)} className="img-fluid" />
                     </Col>
                     <Col lg={4} md={6}>
                     <div className="mb-4 mb-md-6 mt-0 ciyashop_info_box ciyashop_info_box-layout-style_2 ciyashop_info_box-content_alignment-left ciyashop_info_box-with-icon ciyashop_info_box-icon-source-font ciyashop_info_box-icon-style-border ciyashop_info_box-icon-size-md ciyashop_info_box-icon-shape-round ciyashop_info_box-icon_position-left info_box-step_position-above_title">
@@ -128,10 +125,9 @@ function InterestingFacts() {
                                     04 </span>
                                 </div>
                                 <h4 className="ciyashop_info_box-title" style={{color: '#323232'}}>
-                                Premium Gifts </h4>
+                                    Quà tặng cao cấp </h4>
                                 <div className="ciyashop_info_box-description">
-                                <p>Upgrade for £3.50 It has survived not only five centuries, but
-                                    also the leap into electronic.</p>
+                                <p>Nếu bạn mua hàng trên 1 triệu đồng chúng tôi có món quà cho bạn</p>
                                 </div>
                             </div>
                             </div>
@@ -156,10 +152,9 @@ function InterestingFacts() {
                                     05 </span>
                                 </div>
                                 <h4 className="ciyashop_info_box-title" style={{color: '#323232'}}>
-                                Best price guarantee </h4>
+                                Giá tốt nhất </h4>
                                 <div className="ciyashop_info_box-description">
-                                <p>We want to make sure you get the best deals on the web at vero
-                                    eos et accusamus</p>
+                                <p>Chúng tôi muốn đảm bảo bạn nhận được những sản phẩm chất lượng và giá tốt nhất có thể</p>
                                 </div>
                             </div>
                             </div>
@@ -184,10 +179,9 @@ function InterestingFacts() {
                                     06 </span>
                                 </div>
                                 <h4 className="ciyashop_info_box-title" style={{color: '#323232'}}>
-                                Ship the same day </h4>
+                               Vận chuyển nhanh chóng </h4>
                                 <div className="ciyashop_info_box-description">
-                                <p>Order an experience before 3pm and we'll get it in the post the
-                                    same day versions have evolved.</p>
+                                <p>Chúng tôi vận chuyển một cách nhanh chóng</p>
                                 </div>
                             </div>
                             </div>

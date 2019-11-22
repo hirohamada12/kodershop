@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 function SocialFilter() {
        return (
         <div className="widget widget_pgs_social_profiles">
-            <h4 className="widget-title">Social Info</h4>
+            <h4 className="widget-title">Mạng Xã Hội</h4>
             <div className="social-profiles-wrapper">
                 <div className="social-profiles-wrapper-inner social-profiles-default social-profiles-shape-square">
                 <div className="social-profiles">

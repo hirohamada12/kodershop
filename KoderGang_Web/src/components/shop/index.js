@@ -8,6 +8,8 @@ import ShopBanner from '../../widgets/shopfilter/ShopBanner';
 import {Link} from 'react-router-dom';
 import {Col, Container, Row} from 'reactstrap';
 import ProductList from '../../widgets/ProductList';
+import {getFilterProductsdata} from '../../services';
+import {connect} from 'react-redux';
 import TopFilter from '../../widgets/shopfilter/TopFilter';
 import InfiniteScroll from 'react-infinite-scroll-component';
 
@@ -37,17 +39,16 @@ const shopitemslider = {
             }
         }
     ]
-
 };
 
 class ShopPage extends Component {
 
     constructor(props, context) {
-        super(props, context)
+        super(props, context);
         this.state = {
             limit: 5,
             hasMoreProduct: true,
-            getproduct: []
+            getproduct: this.props.products
         }
     }
 
@@ -85,11 +86,12 @@ class ShopPage extends Component {
                 limit: this.state.limit + 5
             });
         }, 2500);
-    }
+    };
 
     render() {
         let {products} = this.props;
-        let layoutstyle = localStorage.getItem('setLayoutStyle')
+        console.log(products);
+        let layoutstyle = localStorage.getItem('setLayoutStyle');
 
         if (layoutstyle == null) {
             layoutstyle = localStorage.setItem('setLayoutStyle', 'col-sm-6 col-md-4')
@@ -102,17 +104,17 @@ class ShopPage extends Component {
                         <Row className="intro-title align-items-center">
                             <Col md={6} className="text-left">
                                 <div className="intro-title-inner">
-                                    <h1>Shop</h1>
+                                    <h1>Sản phẩm</h1>
                                 </div>
                             </Col>
                             <Col md={6} className="text-right">
                                 <ul className="ciyashop_breadcrumbs page-breadcrumb breadcrumbs">
                                     <li className="home">
-                                <span className="item-element">
-                                <Link className="bread-link bread-home" to="/">Home</Link>
+                                <span>
+                                <Link className="bread-link bread-home" to="/">Trang chủ</Link>
                                 </span>
                                     </li>
-                                    <li><span className="item-element">Products</span></li>
+                                    <li><span>Sản phẩm</span></li>
                                 </ul>
                             </Col>
                         </Row>
@@ -147,7 +149,7 @@ class ShopPage extends Component {
                                         dataLength={this.state.limit}
                                         next={this.fetchProduct}
                                         hasMore={this.state.hasMoreProduct}
-                                        loader={<div className="lazyload-img"></div>}
+                                        loader={<div className="lazyload-img"/>}
                                     >
                                         <Row
                                             className="products products-loop grid ciyashop-products-shortcode pgs-product-list">
@@ -159,17 +161,16 @@ class ShopPage extends Component {
                                     </InfiniteScroll>
                                     :
                                     <Row className="products products-loop grid ciyashop-products-shortcode">
-                                        <div className="col-sm-12 text-center section-b-space mt-5 no-found">
+                                        <div className="col-sm-12 text-center  mt-5">
                                             <img src={require(`../../assets/images/empty-search.jpg`)}
-                                                 className="img-fluid mb-4"/>
-                                            <h3>Sorry! Couldn't find the product you were looking For!!! </h3>
-                                            <p>Please try searching with other words.</p>
-                                            <Link to="/shop" className="btn btn-solid">Continue Shopping</Link>
+                                                 className="img-fluid mb-4" alt={""}/>
+                                            <h3>Xin Lỗi! Không tìm thấy sản phẩm! </h3>
+                                            <p>Làm ơn thử lại.</p>
+                                            <Link to="/shop" className="btn btn-solid">Tiếp tục mua sắm</Link>
                                         </div>
                                     </Row>
                                 }
                             </div>
-
                         </Row>
                     </Container>
                 </div>
@@ -178,11 +179,9 @@ class ShopPage extends Component {
     }
 }
 
-// const mapStateToProps = (state) => ({
-//     products: getVisibleproducts(state.data, state.filters),
-//     symbol: state.data.symbol,
-// });
-// export default connect(
-//     mapStateToProps, {}
-// )(ShopPage)
-export default (ShopPage)
+const mapDispatchToProps = (state) => ({
+    products: getFilterProductsdata(state.data, state.filters)
+});
+export default connect(
+    mapDispatchToProps, {}
+)(ShopPage)

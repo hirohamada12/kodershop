@@ -14,6 +14,7 @@ import Tables from "./views/Tables";
 import AddProduct from "./views/product/AddProduct";
 import Category from "./views/category/Category";
 import BlogPosts from "./views/BlogPosts";
+import Login from './views/Login'
 
 export default [
   {

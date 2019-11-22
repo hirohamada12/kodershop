@@ -1,13 +1,11 @@
 import React from "react";
-import {Button, Modal, ModalBody, ModalFooter, ModalHeader} from "shards-react";
+import {Modal, ModalHeader} from "shards-react";
 
-export var showContent = function (_content, _onConfirm, _title = 'Thêm mới') {
+export var showContent = function (_content, _title = 'Thêm mới') {
   this.setState({
     title: _title,
     content: _content,
     open: true,
-    showConfirm: true,
-    onConfirm: _onConfirm
   })
 };
 export var hideModalContent = function () {
@@ -38,12 +36,7 @@ export default class ModalContent extends React.Component {
           <ModalHeader style={{
             backgroundColor: '#2961ff',
           }}>{this.state.title}</ModalHeader>
-          <ModalBody>{this.state.content}</ModalBody>
-          <ModalFooter>
-            <Button
-              onClick={this.state.onConfirm}>Lưu</Button>
-            <Button onClick={this.onClose} theme="secondary">Đóng</Button>
-          </ModalFooter>
+          {this.state.content}
         </Modal>
       </div>
     );

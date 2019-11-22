@@ -6,8 +6,26 @@ body {
   color: #393c45;
 }
 
-html, body, #app, #root {
+.errors {
+  color: red;
+}
+html, body, .app, .Login-component, #app, #root {
   overflow: auto;
+  height: 100%;
+  margin: 0;
+}
+
+.Login-component {
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #preloader {

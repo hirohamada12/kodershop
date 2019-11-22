@@ -3,6 +3,7 @@ import Loader from "react-loader-spinner";
 import {Link} from 'react-router-dom';
 import logo from '../../assets/images/Logo.png'
 import navLinks from './NavLinks.js';
+import i18n from '../../common/i18n'
 import {
     Col,
     Collapse,
@@ -17,14 +18,12 @@ import {
     Row,
     UncontrolledDropdown
 } from 'reactstrap';
-import './styles.css';
-
 class Header extends Component {
     constructor(props) {
 
         super(props);
-        // this.ReadCartItems = this.ReadCartItems.bind(this);
-        //   this.ReadWishListItems = this.ReadWishListItems.bind(this);
+        this.ReadCartItems = this.ReadCartItems.bind(this);
+        this.ReadWishListItems = this.ReadWishListItems.bind(this);
         this.toggle = this.toggle.bind(this);
         this.state = {
             timeout: true,
@@ -63,45 +62,42 @@ class Header extends Component {
         }
     }
 
-    // ReadCartItems() {
-    //     return JSON.parse(localStorage.getItem("LocalCartItems"));
-    // }
-    // removeFromCart = (Index) => {
-    //     let UpdatedCart = JSON.parse(localStorage.getItem("LocalCartItems"));
-    //     UpdatedCart = UpdatedCart.slice(0, Index).concat(UpdatedCart.slice(Index + 1, UpdatedCart.length));
-    //     localStorage.removeItem("LocalCartItems");
-    //     localStorage.setItem("LocalCartItems", JSON.stringify(UpdatedCart));
-    // }
+    ReadCartItems() {
+        return JSON.parse(localStorage.getItem("LocalCartItems"));
+    }
+
+    removeFromCart = (Index) => {
+        let UpdatedCart = JSON.parse(localStorage.getItem("LocalCartItems"));
+        UpdatedCart = UpdatedCart.slice(0, Index).concat(UpdatedCart.slice(Index + 1, UpdatedCart.length));
+        localStorage.removeItem("LocalCartItems");
+        localStorage.setItem("LocalCartItems", JSON.stringify(UpdatedCart));
+        this.forceUpdate();
+    };
 
     ReadWishListItems() {
         return JSON.parse(localStorage.getItem("LocalWishListItems"));
     }
-
     toggle() {
+        this.forceUpdate();
         this.setState(prevState => ({
             modal: !prevState.modal
         }));
     }
-
     componentDidMount() {
         window.addEventListener('scroll', this.handleScroll);
     }
-
     componentWillUnmount() {
         window.removeEventListener('scroll', this.handleScroll);
     }
-
     handleScroll(event) {
         let scrollTop = (document.documentElement && document.documentElement.scrollTop) ||
             document.body.scrollTop;
-
         if (scrollTop > 100) {
             document.getElementById("site-header").setAttribute("class", "site-header header-style-menu-center is-sticky");
         } else {
             document.getElementById("site-header").setAttribute("class", "site-header header-style-menu-center");
         }
     }
-
     ShowCart() {
         if (this.state.CartHide == true) {
             let elm = document.getElementById("DivCartContent");
@@ -111,7 +107,6 @@ class Header extends Component {
             }
         }
     }
-
     HideCart() {
         let elm = document.getElementById("DivCartContent");
         if (elm != null) {
@@ -119,13 +114,11 @@ class Header extends Component {
             this.state.CartHide = true;
         }
     }
-
     closeNavbar() {
         if (this.state.collapsed !== true) {
             this.toggleNavbar();
         }
     }
-
     onClickClassAdd(pages) {
         if (this.state.classset != pages) {
             this.setState({
@@ -145,16 +138,13 @@ class Header extends Component {
                 })
             }
         }
-
     }
-
     OpenSubmenuOpen(id) {
         let elm = document.getElementById(id);
         if (elm != null) {
             document.getElementById(id).setAttribute("class", "dropdown-menu dropdown-menu-right show")
         }
     }
-
     OpenSubmenuClose(id) {
         let elm = document.getElementById(id);
         if (elm != null) {
@@ -234,7 +224,8 @@ class Header extends Component {
                                                                                                         <Fragment>
                                                                                                             <NavItem>
                                                                                                                 <NavLink
-                                                                                                                    href={navLink.path}><i className="fa fa-home"/> {navLink.menu_title}
+                                                                                                                    href={navLink.path}><i
+                                                                                                                    className="fa fa-home"/> {navLink.menu_title}
                                                                                                                 </NavLink>
                                                                                                             </NavItem>
 
@@ -260,103 +251,107 @@ class Header extends Component {
                                                         <div className="ciya-tools-wrapper">
                                                             <ul className="ciya-tools-actions">
                                                                 <li className="ciya-tools-action ciya-tools-cart">
-                                                                    <Link className="cart-link"
-                                                                          to="/ShopingCart"
-                                                                          onClick={() => this.ShowCart()}>
-                                                                                <span className="cart-icon"><i
-                                                                                    className="glyphicon glyphicon-shopping-cart"/></span>
-                                                                        <span
-                                                                            className="cart-count count">  10  </span>
-                                                                    </Link>
-                                                                    {/*{(this.ReadCartItems() != null && this.ReadCartItems().length > 0) ?*/}
+                                                                    {
+                                                                        (this.ReadCartItems() == null || this.ReadCartItems().length === 0) ?
+                                                                            <Link className="cart-link" to="#" onClick={() => this.ShowCart()} >
+                                                                                <span className="cart-icon"><i className="glyphicon glyphicon-shopping-cart" /></span>
+                                                                                <span className="cart-count count">  {this.ReadCartItems() == null ? 0 : this.ReadCartItems().length}  </span>
+                                                                            </Link>
 
-                                                                    {/*    <div className="cart-contents"*/}
-                                                                    {/*         id="DivCartContent">*/}
-                                                                    {/*        <div*/}
-                                                                    {/*            className="widget ciyashop widget-shopping-cart">*/}
-                                                                    {/*            <div*/}
-                                                                    {/*                className="widget-shopping-cart-content">*/}
-                                                                    {/*                <div*/}
-                                                                    {/*                    className="pgs-product-list-widget-container has-scrollbar">*/}
-                                                                    {/*                    <ul className="ciyashop-mini-cart cart-list">*/}
+                                                                            :
+
+                                                                            <Link className="cart-link" to="/ShopingCart" onClick={() => this.ShowCart()} >
+                                                                                <span className="cart-icon"><i className="glyphicon glyphicon-shopping-cart" /></span>
+                                                                                <span className="cart-count count">  {this.ReadCartItems() == null ? 0 : this.ReadCartItems().length}  </span>
+                                                                            </Link>
+
+                                                                    }
+                                                                    {(this.ReadCartItems() != null && this.ReadCartItems().length > 0) ?
+
+                                                                        <div className="cart-contents"
+                                                                             id="DivCartContent">
+                                                                            <div
+                                                                                className="widget ciyashop widget-shopping-cart">
+                                                                                <div
+                                                                                    className="widget-shopping-cart-content">
+                                                                                    <div
+                                                                                        className="pgs-product-list-widget-container has-scrollbar">
+                                                                                        <ul className="ciyashop-mini-cart cart-list">
+                                                                                            {this.ReadCartItems().map((CartItem, index) => (
+                                                                                                <li className="ciya-mini-cart-item">
+                                                                                                    <Link
+                                                                                                        onClick={() => this.removeFromCart(index)}
+                                                                                                        id={`Product_${CartItem.ProductID}`}
+                                                                                                        className="remove remove_from_cart_button"
+                                                                                                        to={"#"}>×</Link>
+                                                                                                    <div
+                                                                                                        className="media">
+                                                                                                        <Link
+                                                                                                            to="#"><img
+                                                                                                            width={60}
+                                                                                                            height={76}
+                                                                                                            src={CartItem.ProductImage}
+                                                                                                            className="img-fluid"
+                                                                                                            alt/></Link>
+                                                                                                        <div
+                                                                                                            className="media-body">
+                                                                                                            <Link to="#"
+                                                                                                                  className="product-title">{CartItem.ProductName}</Link>
+                                                                                                            <span
+                                                                                                                className="quantity">{CartItem.Qty} × <span
+                                                                                                                className="woocs-special_price_code"><span
+                                                                                                                className="ciya-Price-amount amount">{CartItem.Rate}</span><span
+                                                                                                                className="ciya-Price-currencySymbol"> đ</span></span></span>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </li>
+                                                                                            ))}
+
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                    <p className="ciyashop-mini-cart__total total">
+                                                                                        <strong>Tổng:</strong> <span
+                                                                                        className="woocs_special_price_code"><span
+                                                                                        className="ciyashop-Price-amount amount"> {this.ReadCartItems().reduce((fr, CartItem) => fr + (CartItem.Qty * CartItem.Rate), 0)}<span
+                                                                                        className="ciyashop-Price-currencySymbol"> đ</span></span></span>
+                                                                                    </p>
+                                                                                    <p className="ciyashop-mini-cart__buttons buttons">
+                                                                                        <Link
+                                                                                            onClick={() => this.HideCart()}
+                                                                                            to="/ShopingCart"
+                                                                                            className="button wc-forward">Giỏ hàng</Link>
+                                                                                        <Link
+                                                                                            onClick={() => this.HideCart()}
+                                                                                            to="/CheckOut"
+                                                                                            className="button checkout wc-forward">Thanh Toán</Link>
+                                                                                    </p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        :
+                                                                        <div className="cart-contents"
+                                                                             id="DivCartContent">
+                                                                            <div
+                                                                                className="widget ciyashop widget-shopping-cart">
+                                                                                <div
+                                                                                    className="widget-shopping-cart-content">
+                                                                                    <p className="ciyashop-mini-cart__total total">
+                                                                                        <img
+                                                                                            src={require(`../../assets/images/empty-cart.png`)}
+                                                                                            className="img-fluid mr-3"/>
+                                                                                        <strong>{i18n.t('emptyCart')}</strong>
+                                                                                        <span
+                                                                                            className="woocs_special_price_code"><span
+                                                                                            className="ciyashop-Price-amount amount"><span
+                                                                                            className="ciyashop-Price-currencySymbol"></span> </span></span>
+                                                                                    </p>
 
 
-                                                                    {/*                        {this.ReadCartItems().map((CartItem, index) => (*/}
-
-                                                                    {/*                            <li className="ciya-mini-cart-item">*/}
-                                                                    {/*                                <Link*/}
-                                                                    {/*                                    onClick={() => this.removeFromCart(index)}*/}
-                                                                    {/*                                    id={`Product_${CartItem.ProductID}`}*/}
-                                                                    {/*                                    className="remove remove_from_cart_button">×</Link>*/}
-                                                                    {/*                                <div*/}
-                                                                    {/*                                    className="media">*/}
-                                                                    {/*                                    <Link*/}
-                                                                    {/*                                        to="#"><img*/}
-                                                                    {/*                                        width={60}*/}
-                                                                    {/*                                        height={76}*/}
-                                                                    {/*                                        src={require(`../../assets/images/${CartItem.ProductImage}`)}*/}
-                                                                    {/*                                        className="img-fluid"*/}
-                                                                    {/*                                        alt/></Link>*/}
-                                                                    {/*                                    <div*/}
-                                                                    {/*                                        className="media-body">*/}
-                                                                    {/*                                        <Link to="#"*/}
-                                                                    {/*                                              className="product-title">{CartItem.ProductName}</Link>*/}
-                                                                    {/*                                        <span*/}
-                                                                    {/*                                            className="quantity">{CartItem.Qty} × <span*/}
-                                                                    {/*                                            className="woocs-special_price_code"><span*/}
-                                                                    {/*                                            className="ciya-Price-amount amount"><span*/}
-                                                                    {/*                                            className="ciya-Price-currencySymbol">$</span>{CartItem.Rate}</span></span></span>*/}
-                                                                    {/*                                    </div>*/}
-                                                                    {/*                                </div>*/}
-                                                                    {/*                            </li>*/}
-                                                                    {/*                        ))}*/}
-
-                                                                    {/*                    </ul>*/}
-                                                                    {/*                </div>*/}
-                                                                    {/*                <p className="ciyashop-mini-cart__total total">*/}
-                                                                    {/*                    <strong>Subtotal:</strong> <span*/}
-                                                                    {/*                    className="woocs_special_price_code"><span*/}
-                                                                    {/*                    className="ciyashop-Price-amount amount"><span*/}
-                                                                    {/*                    className="ciyashop-Price-currencySymbol">$</span> {this.ReadCartItems().reduce((fr, CartItem) => fr + (CartItem.Qty * CartItem.Rate), 0)}</span></span>*/}
-                                                                    {/*                </p>*/}
-                                                                    {/*                <p className="ciyashop-mini-cart__buttons buttons">*/}
-                                                                    {/*                    <Link*/}
-                                                                    {/*                        onClick={() => this.HideCart()}*/}
-                                                                    {/*                        to="/ShopingCart"*/}
-                                                                    {/*                        className="button wc-forward">View*/}
-                                                                    {/*                        cart</Link>*/}
-                                                                    {/*                    <Link*/}
-                                                                    {/*                        onClick={() => this.HideCart()}*/}
-                                                                    {/*                        to="/CheckOut"*/}
-                                                                    {/*                        className="button checkout wc-forward">Checkout</Link>*/}
-                                                                    {/*                </p>*/}
-                                                                    {/*            </div>*/}
-                                                                    {/*        </div>*/}
-                                                                    {/*    </div>*/}
-
-                                                                    {/*    :*/}
-                                                                    {/*    <div className="cart-contents"*/}
-                                                                    {/*         id="DivCartContent">*/}
-                                                                    {/*        <div*/}
-                                                                    {/*            className="widget ciyashop widget-shopping-cart">*/}
-                                                                    {/*            <div*/}
-                                                                    {/*                className="widget-shopping-cart-content">*/}
-                                                                    {/*                <p className="ciyashop-mini-cart__total total">*/}
-                                                                    {/*                    <img*/}
-                                                                    {/*                        src={require(`../../assets/images/empty-cart.png`)}*/}
-                                                                    {/*                        className="img-fluid mr-3"/>*/}
-                                                                    {/*                    <strong>Your cart is currently*/}
-                                                                    {/*                        empty.</strong> <span*/}
-                                                                    {/*                    className="woocs_special_price_code"><span*/}
-                                                                    {/*                    className="ciyashop-Price-amount amount"><span*/}
-                                                                    {/*                    className="ciyashop-Price-currencySymbol"></span> </span></span>*/}
-                                                                    {/*                </p>*/}
-
-
-                                                                    {/*            </div>*/}
-                                                                    {/*        </div>*/}
-                                                                    {/*    </div>*/}
-                                                                    {/*}*/}
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    }
                                                                 </li>
                                                                 {/*<li className="ciya-tools-action ciya-tools-wishlist">*/}
                                                                 {/*    <Link to="/wishlist"><i*/}

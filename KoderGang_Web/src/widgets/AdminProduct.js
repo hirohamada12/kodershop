@@ -1,19 +1,16 @@
-
 /**
  * Admin List Product Display
  **/
-import React , {Component} from 'react';
-import { Row, Col, Container,Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
+import React, {Component} from 'react';
+import {Col, Modal, ModalBody, ModalFooter, ModalHeader} from 'reactstrap';
 import {Link} from 'react-router-dom';
-import { ToastContainer,toast  } from 'react-toastify';
+import {ToastContainer} from 'react-toastify';
 
 
 class AdminproductList extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
         this.toggle1 = this.toggle1.bind(this);
-        var AddToCart,AddToWishList
-
         this.state = {
             open: false,
             modal1: false,
@@ -22,66 +19,64 @@ class AdminproductList extends Component {
             image: ''
         }
     }
-
     toggle1() {
         this.setState(prevState => ({
-          modal1: !prevState.modal1
+            modal1: !prevState.modal1
         }));
     }
-    onDeleteInvoicePopup()
-    {
+    onDeleteInvoicePopup() {
         this.toggle1();
     }
     render() {
-    const {product,deleteproduct} = this.props;
-    return (
-
-
-             <Col key={1} sm={6} lg={3}>
-                    <ToastContainer autoClose={1000} />
-                     <div className="product product_tag-black product-hover-style-default product-hover-button-style-light product_title_type-single_line product_icon_type-line-icon">
-                        <div className="product-inner element-hovered">
+        const {product, deleteproduct} = this.props;
+        return (
+            <Col key={1} sm={6} lg={3}>
+                <ToastContainer autoClose={1000}/>
+                <div
+                    className="product product_tag-black product-hover-style-default product-hover-button-style-light product_title_type-single_line product_icon_type-line-icon">
+                    <div className="product-inner element-hovered">
                         <div className="product-thumbnail">
                             <div className="product-thumbnail-inner">
-                            <Link to="#">
-                                {product.pictures[0] ?
-                                    <div className="product-thumbnail-main">
-                                        <img src={require(`../assets/images/${product.pictures[0]}`)} className="img-fluid" />
-                                    </div>
-                                :
-                                    null
-                                }
-                                {product.pictures[1]  ?
-                                    <div className="product-thumbnail-swap">
-                                            <img src={require(`../assets/images/${product.pictures[1]}`)} className="img-fluid" />
-                                    </div>
-                                    :
-                                    null
-                                }
-                            </Link>
+                                <Link to="#">
+                                    {product.pictures[0] ?
+                                        <div className="product-thumbnail-main">
+                                            <img src={product.pictures[0]} className="img-fluid" alt={""}/>
+                                        </div>
+                                        :
+                                        null
+                                    }
+                                    {product.pictures[1] ?
+                                        <div className="product-thumbnail-swap">
+                                            <img src={product.pictures[1]} className="img-fluid" alt={""}/>
+                                        </div>
+                                        :
+                                        null
+                                    }
+                                </Link>
                             </div>
                             <div className="product-action product-action-quick-view">
-                                <Link to={`/admin-panel/Product-edit/${product.category}/${product.id}`} className="open-edit-view"><i class="fa fa-pencil-square-o"></i></Link>
-                                <Link to="#" className="product-delete" onClick={() => this.onDeleteInvoicePopup()} ><i class="fa fa-trash-o"></i></Link>
+                                <Link to={`/admin/Product-edit/${product.category}/${product.id}`}
+                                      className="open-edit-view"><i class="fa fa-pencil-square-o"/></Link>
+                                <Link to="#" className="product-delete" onClick={() => this.onDeleteInvoicePopup()}><i
+                                    class="fa fa-trash-o"/></Link>
                             </div>
                             <div className="product-actions">
                             </div>
                         </div>
                         <div className="product-info">
                             {product.tags ?
-                                   <span className="ciyashop-product-category">
-                                    {product.tags.map((tag,index) =>
-                                            <span>{tag}{index === product.tags.length-1 ?'':','}
+                                <span className="ciyashop-product-category">
+                                    {product.tags.map((tag, index) =>
+                                        <span>{tag}{index === product.tags.length - 1 ? '' : ','}
                                             </span>
-
-                                     )}
+                                    )}
                                 </span>
-                            : null }
+                                : null}
                             {product.name ?
-                            <h3 className="product-name">
-                                <Link to="#">{product.name}</Link>
-                            </h3>
-                            : null }
+                                <h3 className="product-name">
+                                    <Link to="#">{product.name}</Link>
+                                </h3>
+                                : null}
                             {product.salePrice ?
                                 <span className="price">
                                 <ins>
@@ -90,30 +85,30 @@ class AdminproductList extends Component {
                                     </span>
                                 </ins>
                                 </span>
-                            : null }
+                                : null}
                             {product.description ?
-                            <div className="product-details__short-description">
-                            <p>{product.description}
-                            </p>
-                            </div>
-                            : null }
-                        </div>
+                                <div className="product-details__short-description">
+                                    <p>{product.description}
+                                    </p>
+                                </div>
+                                : null}
                         </div>
                     </div>
-
-
-                    {/* modal-delete */}
-                    <Modal isOpen={this.state.modal1} toggle={this.toggle1} className="modal-delete modal-lg modal-dialog-centered">
-                        <ModalHeader toggle={this.toggle1}  ></ModalHeader>
-                        <ModalBody>
-                             Are You Sure You Want To Delete This Product ?
-                        </ModalBody>
-                        <ModalFooter className="justify-content-center pt-4" >
-                            <Link className="action-button"  onClick={(res)=>deleteproduct(this.toggle1())}>Yes</Link>
-                            <Link className="action-button no"  onClick={this.toggle1}>No</Link>
-                        </ModalFooter>
-                    </Modal>
-                </Col>
+                </div>
+                {/* modal-delete */}
+                <Modal isOpen={this.state.modal1} toggle={this.toggle1}
+                       className="modal-delete modal-lg modal-dialog-centered">
+                    <ModalHeader toggle={this.toggle1}/>
+                    <ModalBody>
+                        Bạn chắc chắn muốn xóa sản phẩm này chứ?
+                    </ModalBody>
+                    <ModalFooter className="justify-content-center pt-4">
+                        <Link to={'#'} className="action-button"
+                              onClick={(res) => deleteproduct(this.toggle1())}>Đồng ý</Link>
+                        <Link to={"#"} className="action-button no" onClick={this.toggle1}>Đóng</Link>
+                    </ModalFooter>
+                </Modal>
+            </Col>
         )
     }
 

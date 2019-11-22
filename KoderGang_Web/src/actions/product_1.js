@@ -1674,7 +1674,7 @@ export default {
         "ratings": "",
         "value": {
             "min": 150,
-            "max": 1050
+            "max": 10000000
         },
         "search": "",
         "sortBy": ""

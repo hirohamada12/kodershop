@@ -233,8 +233,8 @@ class Footer extends React.Component {
                 </footer>
                 {/* Back to Top */}
                 <div id="back-to-top" style={backtotop} onClick={this.ClicktoTop}>
-                    <Link to={"/"} class="top arrow">
-                        <i class="fa fa-angle-up"></i>
+                    <Link to={"/"} className="top arrow">
+                        <i className="fa fa-angle-up"/>
                     </Link>
                 </div>
             </div>

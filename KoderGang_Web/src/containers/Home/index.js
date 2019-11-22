@@ -8,7 +8,7 @@ import {Col, Container, Row} from 'reactstrap';
 import Instagram from '../../widgets/Instafeed.js';
 import HomSlider from "../../widgets/HomSlider";
 import TopSellingProduct from "../../widgets/TopSellingProduct";
-
+import BrandLogoSlider from '../../widgets/BrandLogoSlider.js';
 const latestblogslider = {
     dots: false,
     infinite: true,
@@ -75,7 +75,7 @@ class HomePage extends Component {
                                             </Row>
                                         </Container>
                                         <Container>
-                                            <HomeBanner/>
+                                            {/*<HomeBanner/>*/}
                                         </Container>
                                         <div className="container-fluid section-2">
                                             <DealOfTheWeek/>
@@ -111,7 +111,7 @@ class HomePage extends Component {
                                                 <div class="row">
                                                     <div class="col-sm-12">
                                                         <div class="instafeed insta-feeds">
-                                                            <Instagram/>
+                                                            <BrandLogoSlider/>
                                                         </div>
                                                     </div>
                                                 </div>

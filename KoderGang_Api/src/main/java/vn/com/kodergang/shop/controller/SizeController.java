@@ -43,7 +43,6 @@ public class SizeController {
             logger.info(" user: "
                     + SecurityContextHolder.getContext().getAuthentication().getName() + Constant.LOG.END);
         }
-
     }
 
     @PostMapping("/deleteSize")
